@@ -1,0 +1,413 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    background-color: #ddd;
+    line-height: 1.65;
+    /* padding-bottom: 1000px; */
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+
+body header nav {
+    display: flex;
+    background-color: rgb(30, 80, 76);
+    justify-content: space-around;
+    padding: 20px 0;
+    color: rgb(165, 230, 224);
+    /* position: fixed; */
+    z-index: 999;
+}
+
+body header nav .logo {
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 3px;
+}
+
+body header nav ul {
+    /* flex-wrap: wrap; */
+    display: flex;
+    list-style: none;
+    width: 40%;
+    /* width: 500px; */
+    /* background-color: violet; */
+    justify-content: space-evenly;
+}
+
+body header nav ul li {
+    /* flex-wrap: wrap; */
+    /* display: flex; */
+}
+
+body header nav ul li a{
+    text-decoration: none;
+    color: rgb(165, 230, 224);
+    font-size: 0.8em;
+}
+body header nav ul li a:hover{
+    color: rgb(227, 240, 238);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 30px;
+    height: 28px;
+    left: -1px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(165, 230, 224);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animasi */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+    /* translate: Y(0,0);
+    transform: rotate(45deg); */
+    /* background-color: blue; */
+}
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+    background-color: white;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0px);
+    background-color: white;
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    /* transform: rotate(-45deg); */
+    /* scale: 0; */
+    transform: scale(0);
+    opacity: 0;
+}
+
+
+/* header .navbar {
+    background-color: cadetblue;
+    width: 100%;
+    /* height: 40px; 
+    margin-top: -80px;
+    position: fixed;
+    z-index: 999;
+}
+
+.navbar .tombols {
+    text-align: center;
+    line-height: 50px;
+    
+}
+
+.navbar .tombol {
+    color: white;
+    text-decoration: none;
+    margin: auto 20px;
+    text-transform: uppercase;
+
+}
+.navbar .tombol:hover {
+    background-color: white;
+    color: cadetblue;
+    padding: 2px;
+    border-radius: 5px;
+
+} */
+
+/* Latihan 1  */
+.container-satu {
+    width: 800px;
+    margin: 80px auto 60px;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    border: rgb(172, 172, 172) 5px dashed;
+}
+
+.kolom-utama {
+    flex: 3;
+    order: 2;
+    padding-right: 20px;
+}
+
+.sidebar-satu {
+    flex: 1;
+    order: 1;
+
+}
+
+.sidebar-dua {
+    flex: 1;
+    order: 3;
+}
+
+/* Latihan 2  */
+.container-dua {
+    /* back */
+    width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.layanan {
+    /* width: 30%; */
+    
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    margin: 0 15px;
+    /* border: rgb(172, 172, 172) 5px dashed; */
+    
+}
+
+.layanan.satu {
+    background-color: skyblue;
+    border: rgb(160, 159, 159) 5px dashed;
+}
+.layanan.dua {
+    background-color: rgb(197, 197, 197);
+    border: rgb(219, 156, 156) 5px dashed;
+}
+.layanan.tiga {
+    background-color: rgb(223, 189, 189);
+    border: skyblue 5px dashed;
+}
+
+/* Latihan 3 */
+.container-tiga {
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.thumbnail {
+    width: 25%;
+}
+
+.thumbnail img{
+    width: 90%;
+    /* border: rgb(172, 172, 172) 2px solid; */
+    box-shadow: rgb(100, 100, 100) -10px 10px 5px;
+    /* margin: 25px 50px; */
+}
+
+/* Latihan 4 */
+.container-empat {
+    max-width: 800px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+    /* margin: 20px auto; */
+    margin: 60px auto;
+}
+
+.card {
+    /* border: 1px grey solid; */
+    border: rgb(172, 172, 172) 3px dashed;
+    border-radius: 10px;
+    background-color:   #eee;
+    overflow: hidden;
+    /* width: 50%; */
+    flex: 1;
+    margin: auto 15px;
+}
+
+.card .header.a {
+    background-color: rgb(223, 189, 189);
+}
+
+.card .header.b {
+    background-color: rgb(197, 197, 197);
+}
+.card .header.c {
+    background-color: skyblue;
+}
+
+.card.besar {
+    transform: scale(1.12);
+}
+
+.card .header{
+    height: 150px;
+    background-color: rgb(109, 109, 109);
+}
+
+.card .content {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.footer {
+    background-color: cadetblue;
+    width: 100%;
+    /* height: 40px; */
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    /* margin-top: -80px; */
+    /* position: fixed; */
+    /* z-index: 999; */
+}
+
+.container-lima {
+    width: 500px;
+    height: 500px;
+    border: rgb(172, 172, 172) 5px dashed;
+    margin: auto;
+    display: flex;
+    margin-bottom: 60px;
+    background-color: white;
+}
+
+.kotak {
+    width: 100px;
+    line-height: 100px;
+    background-color: black;
+    border-radius: 0.5rem;
+    color: white;
+    text-align: center;
+    margin: auto;
+    /* border: rgb(172, 172, 172) 3px dashed; */
+    transform: rotate(calc(5 * 360deg));
+    /* transition: 3s; */
+    cursor: pointer;
+}
+
+.kotak:hover {
+    transform: scale(2px, 2px);
+    transition: .5s;
+    background-color: rgb(255, 0, 0);
+}
+
+.kotak:active {
+    /* transform: rotate(360deg);
+    transition: 1.5s; */
+
+    transform: rotate(0deg);
+    transition:  0s;
+    border-radius: 50%;
+
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container-satu {
+        max-width: 100vw;
+    }
+    
+    .container-dua {
+        max-width: 100vw;
+        display: block;
+        margin: 50px auto;
+    }
+    
+    .layanan {
+        box-sizing: border-box;
+        /* padding: 20px; */
+        /* margin-bottom: 20px; */
+        width: 100%;
+        text-align: center;
+        /* padding: 20px; */
+        margin: 25px 0;
+        padding: 3px;
+    }
+
+    .container-tiga {
+        max-width: 100vw;
+        margin: auto;
+
+    }
+
+    .thumbnail {
+        width: 50%;
+    }
+
+    .thumbnail img {
+        margin: 0 auto;
+    }
+
+    .container-empat {
+        max-width: 100vw;
+        /* display: flex; */
+        flex-direction: column;
+        /* justify-content: space-between; */
+        /* display: flex; */
+    }
+
+    .card {
+        margin: 15px auto;
+        width: 50%;
+    }
+
+    /* Responsive Breakpoint */
+
+/* uk Tablet */
+@media screen and (max-width: 768px) {
+    body header nav ul {
+        width: 50%;
+    }
+}
+
+/* uk Mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    body header nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        flex-direction: column;
+        /* background-color: rgb(30, 80, 76); */
+        background-color: rgb(46, 124, 118);
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 0;
+        /* display: flex; */
+        transform: translateX(100%);
+        transition: all 1s ;
+        opacity: 0;
+    }
+
+    body header nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+    
+}
+
